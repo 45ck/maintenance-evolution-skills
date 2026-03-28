@@ -90,9 +90,9 @@ LICENSE                              MIT
 
 ## Related workflow agents
 
-- [delivery-manager](https://github.com/45ck/workflow-agents) - Own maintenance flow, rollout timing, and triage coordination
-- [delivery-manager-beads](https://github.com/45ck/workflow-agents) - Track maintenance and rollback follow-up items
-- [quality-reviewer](https://github.com/45ck/workflow-agents) - Review regression and maintainability implications
+- [delivery-manager](https://github.com/45ck/skill-harness) - Own maintenance flow, rollout timing, and triage coordination
+- [delivery-manager-beads](https://github.com/45ck/skill-harness) - Track maintenance and rollback follow-up items
+- [quality-reviewer](https://github.com/45ck/skill-harness) - Review regression and maintainability implications
 
 ## Related skill packs
 
