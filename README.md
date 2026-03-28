@@ -88,6 +88,12 @@ uninstall.sh                         global uninstaller
 LICENSE                              MIT
 ```
 
+## Related workflow agents
+
+- [delivery-manager](https://github.com/45ck/workflow-agents) - Own maintenance flow, rollout timing, and triage coordination
+- [delivery-manager-beads](https://github.com/45ck/workflow-agents) - Track maintenance and rollback follow-up items
+- [quality-reviewer](https://github.com/45ck/workflow-agents) - Review regression and maintainability implications
+
 ## Related skill packs
 
 - [business-analysis-skills](https://github.com/45ck/business-analysis-skills) - Business analysis techniques, workflows, and quality checks
