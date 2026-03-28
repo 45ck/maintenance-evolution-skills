@@ -1,0 +1,143 @@
+{
+  "name": "maintenance-evolution-pack",
+  "version": "0.1.0",
+  "type": "skill-pack",
+  "summary": "Maintenance classification, bug triage, impact/risk review, rollback, deprecation, migration, and knowledge-capture pack for Claude Code-style workflows.",
+  "recommended_order": [
+    "corrective-adaptive-perfective-preventive-classifier",
+    "bug-reproduction-writer",
+    "maintenance-triage-helper",
+    "root-cause-hypothesis-generator",
+    "change-impact-mapper",
+    "regression-risk-reviewer",
+    "hotfix-vs-patch-vs-version-update-selector",
+    "rollback-plan-writer",
+    "deprecation-planner",
+    "migration-readiness-checker",
+    "maintenance-knowledge-capture-writer"
+  ],
+  "skills": [
+    {
+      "id": "corrective-adaptive-perfective-preventive-classifier",
+      "path": "skills/corrective-adaptive-perfective-preventive-classifier/SKILL.md",
+      "purpose": "Classify maintenance work as corrective, adaptive, perfective, or preventive so the team can choose the right response and priority.",
+      "handoffs": [
+        "maintenance-triage-helper",
+        "change-impact-mapper",
+        "maintenance-knowledge-capture-writer"
+      ]
+    },
+    {
+      "id": "bug-reproduction-writer",
+      "path": "skills/bug-reproduction-writer/SKILL.md",
+      "purpose": "Write clear, deterministic bug reproduction steps with environment, data, and expected versus actual behavior.",
+      "handoffs": [
+        "maintenance-triage-helper",
+        "root-cause-hypothesis-generator",
+        "regression-risk-reviewer"
+      ]
+    },
+    {
+      "id": "maintenance-triage-helper",
+      "path": "skills/maintenance-triage-helper/SKILL.md",
+      "purpose": "Triage maintenance work by severity, urgency, user impact, risk, and likely ownership.",
+      "handoffs": [
+        "bug-reproduction-writer",
+        "change-impact-mapper",
+        "hotfix-vs-patch-vs-version-update-selector"
+      ]
+    },
+    {
+      "id": "root-cause-hypothesis-generator",
+      "path": "skills/root-cause-hypothesis-generator/SKILL.md",
+      "purpose": "Generate plausible root-cause hypotheses from symptoms, recent changes, and system context without overstating certainty.",
+      "handoffs": [
+        "change-impact-mapper",
+        "regression-risk-reviewer",
+        "rollback-plan-writer"
+      ]
+    },
+    {
+      "id": "change-impact-mapper",
+      "path": "skills/change-impact-mapper/SKILL.md",
+      "purpose": "Map likely downstream impacts of a proposed change across code, data, interfaces, users, and operations.",
+      "handoffs": [
+        "regression-risk-reviewer",
+        "migration-readiness-checker",
+        "rollback-plan-writer"
+      ]
+    },
+    {
+      "id": "regression-risk-reviewer",
+      "path": "skills/regression-risk-reviewer/SKILL.md",
+      "purpose": "Review a maintenance change for regression risk and identify the most exposed behaviors, integrations, and environments.",
+      "handoffs": [
+        "rollback-plan-writer",
+        "hotfix-vs-patch-vs-version-update-selector",
+        "maintenance-knowledge-capture-writer"
+      ]
+    },
+    {
+      "id": "hotfix-vs-patch-vs-version-update-selector",
+      "path": "skills/hotfix-vs-patch-vs-version-update-selector/SKILL.md",
+      "purpose": "Select whether an issue should be handled as a hotfix, normal patch, or broader version update based on urgency and blast radius.",
+      "handoffs": [
+        "rollback-plan-writer",
+        "deprecation-planner",
+        "migration-readiness-checker"
+      ]
+    },
+    {
+      "id": "rollback-plan-writer",
+      "path": "skills/rollback-plan-writer/SKILL.md",
+      "purpose": "Write a rollback plan that defines reversal triggers, prerequisites, data concerns, and communication steps.",
+      "handoffs": [
+        "migration-readiness-checker",
+        "maintenance-knowledge-capture-writer",
+        "deprecation-planner"
+      ]
+    },
+    {
+      "id": "deprecation-planner",
+      "path": "skills/deprecation-planner/SKILL.md",
+      "purpose": "Plan a controlled deprecation path for features, APIs, components, or configurations without surprising consumers.",
+      "handoffs": [
+        "migration-readiness-checker",
+        "maintenance-knowledge-capture-writer",
+        "change-impact-mapper"
+      ]
+    },
+    {
+      "id": "migration-readiness-checker",
+      "path": "skills/migration-readiness-checker/SKILL.md",
+      "purpose": "Check whether a system, component, or dataset is ready for migration with acceptable technical and operational risk.",
+      "handoffs": [
+        "rollback-plan-writer",
+        "maintenance-knowledge-capture-writer",
+        "deprecation-planner"
+      ]
+    },
+    {
+      "id": "maintenance-knowledge-capture-writer",
+      "path": "skills/maintenance-knowledge-capture-writer/SKILL.md",
+      "purpose": "Capture maintenance knowledge into reusable notes, decision records, runbooks, and future guardrails.",
+      "handoffs": [
+        "corrective-adaptive-perfective-preventive-classifier",
+        "maintenance-triage-helper",
+        "deprecation-planner"
+      ]
+    }
+  ],
+  "templates": [
+    "templates/maintenance-classification-template.md",
+    "templates/bug-reproduction-template.md",
+    "templates/maintenance-triage-template.md",
+    "templates/root-cause-hypothesis-template.md",
+    "templates/change-impact-map-template.md",
+    "templates/regression-risk-template.md",
+    "templates/release-path-decision-template.md",
+    "templates/rollback-plan-template.md",
+    "templates/deprecation-plan-template.md",
+    "templates/migration-readiness-template.md"
+  ]
+}
